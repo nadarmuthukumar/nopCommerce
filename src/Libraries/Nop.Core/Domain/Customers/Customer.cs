@@ -213,6 +213,11 @@ namespace Nop.Core.Domain.Customers
             protected set => _customerAddressMappings = value;
         }
 
+        public void ResetRole()
+        {
+            _customerRoles =  CustomerCustomerRoleMappings.Select(mapping => mapping.CustomerRole).ToList();
+        }
+
         #endregion
     }
 }

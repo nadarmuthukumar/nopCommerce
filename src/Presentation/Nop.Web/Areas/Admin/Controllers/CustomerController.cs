@@ -707,6 +707,7 @@ namespace Nop.Web.Areas.Admin.Controllers
                     }
 
                     _customerService.UpdateCustomer(customer);
+                    customer.ResetRole();
 
                     //ensure that a customer with a vendor associated is not in "Administrators" role
                     //otherwise, he won't have access to the other functionality in admin area
